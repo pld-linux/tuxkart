@@ -15,7 +15,7 @@ URL:		http://tuxkart.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	plib >= 1.7.0-2
+BuildRequires:	plib-devel >= 1.7.0-2
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
