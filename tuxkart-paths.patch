@@ -1,0 +1,99 @@
+diff -durN tuxkart-0.0.6.orig/configure.in tuxkart-0.0.6/configure.in
+--- tuxkart-0.0.6.orig/configure.in	Sun Jul 15 20:39:07 2001
++++ tuxkart-0.0.6/configure.in	Sat Aug  4 18:41:33 2001
+@@ -108,7 +108,7 @@
+   CXXFLAGS="$CXXFLAGS -O6 -Wall $MACH -malign-double -I/usr/local/include -L/usr/local/lib"
+ fi
+ 
+-MY_EXPAND_DIR(tuxkart_datadir, "$datadir/games/$PACKAGE")
++MY_EXPAND_DIR(tuxkart_datadir, "$datadir/$PACKAGE")
+ AC_DEFINE_UNQUOTED(TUXKART_DATADIR, "$tuxkart_datadir")
+ 
+ AC_OUTPUT( Makefile          \
+diff -durN tuxkart-0.0.6.orig/data/Makefile.am tuxkart-0.0.6/data/Makefile.am
+--- tuxkart-0.0.6.orig/data/Makefile.am	Fri Jun 30 09:16:44 2000
++++ tuxkart-0.0.6/data/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,6 +1,6 @@
+ # data/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/data
++pkgdatadir = $(datadir)/@PACKAGE@/data
+ 
+ pkgdata_DATA = $(wildcard *.dat) $(wildcard *.loc) $(wildcard *.drv)
+ 
+diff -durN tuxkart-0.0.6.orig/fonts/Makefile.am tuxkart-0.0.6/fonts/Makefile.am
+--- tuxkart-0.0.6.orig/fonts/Makefile.am	Fri Jun 30 09:16:47 2000
++++ tuxkart-0.0.6/fonts/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,7 +1,7 @@
+ # fonts/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/fonts
++pkgdatadir = $(datadir)/@PACKAGE@/fonts
+ 
+ pkgdata_DATA = $(wildcard *.txf)
+ 
+-EXTRA_DIST = $(pkgdata_DATA)
+\ No newline at end of file
++EXTRA_DIST = $(pkgdata_DATA)
+diff -durN tuxkart-0.0.6.orig/images/Makefile.am tuxkart-0.0.6/images/Makefile.am
+--- tuxkart-0.0.6.orig/images/Makefile.am	Fri Jun 30 08:48:35 2000
++++ tuxkart-0.0.6/images/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,6 +1,6 @@
+ # images/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/images
++pkgdatadir = $(datadir)/@PACKAGE@/images
+ 
+ pkgdata_DATA = $(wildcard *.rgb)
+ 
+diff -durN tuxkart-0.0.6.orig/models/Makefile.am tuxkart-0.0.6/models/Makefile.am
+--- tuxkart-0.0.6.orig/models/Makefile.am	Fri Jun 30 09:14:33 2000
++++ tuxkart-0.0.6/models/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,6 +1,6 @@
+ # models/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/models
++pkgdatadir = $(datadir)/@PACKAGE@/models
+ 
+ pkgdata_DATA = $(wildcard *.ac)
+ 
+diff -durN tuxkart-0.0.6.orig/mods/Makefile.am tuxkart-0.0.6/mods/Makefile.am
+--- tuxkart-0.0.6.orig/mods/Makefile.am	Fri Jun 30 09:15:07 2000
++++ tuxkart-0.0.6/mods/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,7 +1,7 @@
+ # mods/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/mods
++pkgdatadir = $(datadir)/@PACKAGE@/mods
+ 
+ pkgdata_DATA = $(wildcard *.mod)
+ 
+-EXTRA_DIST = $(pkgdata_DATA)
+\ No newline at end of file
++EXTRA_DIST = $(pkgdata_DATA)
+Binary files tuxkart-0.0.6.orig/mods/tk5a.mod and tuxkart-0.0.6/mods/tk5a.mod differ
+diff -durN tuxkart-0.0.6.orig/src/Makefile.am tuxkart-0.0.6/src/Makefile.am
+--- tuxkart-0.0.6.orig/src/Makefile.am	Fri Jul 13 18:15:16 2001
++++ tuxkart-0.0.6/src/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,7 +1,5 @@
+ # src/
+ 
+-bindir=$(prefix)/games
+-
+ bin_PROGRAMS = tuxkart
+ 
+ tuxkart_SOURCES = \
+diff -durN tuxkart-0.0.6.orig/wavs/Makefile.am tuxkart-0.0.6/wavs/Makefile.am
+--- tuxkart-0.0.6.orig/wavs/Makefile.am	Fri Jun 30 09:15:29 2000
++++ tuxkart-0.0.6/wavs/Makefile.am	Sat Aug  4 18:40:11 2001
+@@ -1,7 +1,7 @@
+ # wavs/
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/wavs
++pkgdatadir = $(datadir)/@PACKAGE@/wavs
+ 
+ pkgdata_DATA = $(wildcard *.wav)
+ 
+-EXTRA_DIST = $(pkgdata_DATA)
+\ No newline at end of file
++EXTRA_DIST = $(pkgdata_DATA)
