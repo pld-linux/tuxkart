@@ -1,0 +1,35 @@
+--- tuxkart-0.4.0/src/gfx.cxx.orig	2004-03-18 16:21:44.000000000 +0000
++++ tuxkart-0.4.0/src/gfx.cxx	2004-04-10 20:54:42.000000000 +0000
+@@ -4,9 +4,11 @@
+ #ifndef WIN32
+ #include <unistd.h>
+ #include <string.h>
++#ifdef __i386__
+ #include <sys/io.h>
+ #include <sys/perm.h>                                                           
+ #endif
++#endif
+ 
+ static unsigned int lastKeystroke = 0 ;
+ 
+@@ -143,10 +145,13 @@
+   {
+     firsttime = FALSE ;
+ 
++#ifdef __i386__
+     if ( getenv ( "TUXKART_STEREO" ) == NULL )
+     {
++#endif
+       stereo = 0 ;
+       return ;
++#ifdef __i386__
+     }
+ 
+     fprintf ( stderr, "Requesting control of parallel printer port...\n" ) ;
+@@ -171,5 +176,6 @@
+     outb ( (stereo==-1) ? ~3 : ~2, LPBASE+2 ) ;
+     stereo = -stereo ;
++#endif
+   }
+ }
+ 
