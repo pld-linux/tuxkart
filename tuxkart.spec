@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
+# Source0-md5:	93e6af044c740ffe33cd47941eb94c38
 Source1:	%{name}.desktop
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-ac_fixes.patch
