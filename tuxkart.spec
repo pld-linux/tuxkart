@@ -11,6 +11,8 @@ Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-paths.patch
 URL:		http://tuxkart.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	OpenGL-devel
 BuildRequires:	plib >= 1.4.0
 Requires:	OpenGL
