@@ -10,6 +10,7 @@ Group(pl):	X11/Aplikacje/Gry
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-paths.patch
+Patch1:		%{name}-ac_fixes.patch
 URL:		http://tuxkart.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,19 +31,23 @@ Kolejna gra z linuksowym pingwinem Tuksem.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
-automake -a
+rm -f missing
 aclocal
 autoconf
-%configure CPPFLAGS="-I%{_includedir}"
+automake -a -c
+CPPFLAGS="-I%{_includedir}"; export CPPFLAGS
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+%configure
 %{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/tuxkart,%{_applnkdir}/Games}
 
-%{__make} install DESTDIR="$RPM_BUILD_ROOT"
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/%{name}.desktop
 
