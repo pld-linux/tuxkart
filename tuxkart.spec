@@ -12,7 +12,7 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-paths.patch
 URL:		http://tuxkart.sourceforge.net/
 BuildRequires:	OpenGL-devel
-BuildRequires:	plib
+BuildRequires:	plib >= 1.4.0
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
