@@ -1,0 +1,22 @@
+--- tuxkart-0.0.6/configure.in~	Thu Oct 11 04:01:26 2001
++++ tuxkart-0.0.6/configure.in	Thu Oct 11 04:17:34 2001
+@@ -95,19 +95,6 @@
+ 
+ AM_CONDITIONAL(ENABLE_WIN32_AUDIO, test "x$ac_cv_header_windows_h" = "xyes")
+ 
+-if test "x$ac_cv_header_windows_h" != "xyes" ; then
+-  if test "x$GXX" != "xyes" ; then
+-    CFLAGS="$CFLAGS -I/usr/local/include -L/usr/local/lib"
+-    CXXFLAGS="$CXXFLAGS -I/usr/local/include -L/usr/local/lib"
+-  else
+-    CFLAGS="$CFLAGS -O6 -Wall"
+-    CXXFLAGS="$CXXFLAGS -O6 -Wall"
+-  fi
+-else
+-  CFLAGS="$CFLAGS -O6 -Wall $MACH -malign-double -I/usr/local/include -L/usr/local/lib"
+-  CXXFLAGS="$CXXFLAGS -O6 -Wall $MACH -malign-double -I/usr/local/include -L/usr/local/lib"
+-fi
+-
+ MY_EXPAND_DIR(tuxkart_datadir, "$datadir/$PACKAGE")
+ AC_DEFINE_UNQUOTED(TUXKART_DATADIR, "$tuxkart_datadir")
+ 
