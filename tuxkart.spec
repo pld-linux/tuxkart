@@ -39,7 +39,7 @@ automake -a -c
 CPPFLAGS="-I%{_includedir}"; export CPPFLAGS
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,7 +49,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/tuxkart,%{_applnkdir}/Games}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/%{name}.desktop
 
-gzip -9nf README AUTHORS CHANGES 
+gzip -9nf README AUTHORS CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
