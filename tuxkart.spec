@@ -33,7 +33,7 @@ Kolejna gra z linuksowym pingwinem Tuksem.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 CPPFLAGS="-I%{_includedir}"; export CPPFLAGS
