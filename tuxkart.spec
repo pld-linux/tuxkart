@@ -1,12 +1,12 @@
 Summary:	Another game that stars Tux, the Linux Penguin
 Summary(pl):	Kolejna gra z linuksowym pingwinem Tuksem
 Name:		tuxkart
-Version:	0.2.0
-Release:	4
+Version:	0.4.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
-# Source0-md5:	235683a252a9ae62793537944c1873bb
+# Source0-md5:	e84ab2748ff1ce5ef11d1d7da5188f8f
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-paths.patch
@@ -15,7 +15,7 @@ URL:		http://tuxkart.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	plib-devel >= 1.7.0-2
+BuildRequires:	plib-devel >= 1.8.0
 Requires:	OpenGL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
