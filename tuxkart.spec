@@ -35,7 +35,7 @@ Kolejna gra z linuksowym pingwinem Tuksem.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 CPPFLAGS="-I%{_includedir}"; export CPPFLAGS
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
