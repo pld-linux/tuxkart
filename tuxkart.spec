@@ -2,7 +2,7 @@ Summary:	Another game that stars Tux, the Linux Penguin
 Summary(pl):	Kolejna gra z linuksowym pingwinem Tuksem
 Name:		tuxkart
 Version:	0.2.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
@@ -44,13 +44,13 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/tuxkart,%{_applnkdir}/Games} \
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/tuxkart,%{_desktopdir}} \
 	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/%{name}.desktop
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
@@ -60,6 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AUTHORS CHANGES
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/tuxkart
-%{_applnkdir}/Games/*
+%{_datadir}/%{name}
+%{_desktopdir}/*
 %{_pixmapsdir}/*
