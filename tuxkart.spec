@@ -5,8 +5,6 @@ Version:	0.0.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Group(de):	X11/Applikationen/Spiele
-Group(pl):	X11/Aplikacje/Gry
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-paths.patch
