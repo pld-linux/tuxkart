@@ -2,7 +2,7 @@ Summary:	Another game that stars Tux, the Linux Penguin
 Summary(pl):	Kolejna gra z linuksowym pingwinem Tuksem
 Name:		tuxkart
 Version:	0.0.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://tuxkart.sourceforge.net/dist/%{name}-%{version}.tar.gz
@@ -49,14 +49,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/tuxkart,%{_applnkdir}/Games}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/%{name}.desktop
 
-gzip -9nf README AUTHORS CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README AUTHORS CHANGES
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/tuxkart
 %{_applnkdir}/Games/*
