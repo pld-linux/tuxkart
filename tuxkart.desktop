@@ -7,5 +7,5 @@ Exec=tuxkart
 Terminal=false
 Icon=tuxkart.png
 Type=Application
-Categories=Application;Game;ArcadeGame;
+Categories=Game;ArcadeGame;
 # vi: encoding=utf-8
