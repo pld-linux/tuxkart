@@ -1,5 +1,5 @@
 Summary:	Another game that stars Tux, the Linux Penguin
-Summary(pl):	Kolejna gra z linuksowym pingwinem Tuksem
+Summary(pl.UTF-8):   Kolejna gra z linuksowym pingwinem Tuksem
 Name:		tuxkart
 Version:	0.4.0
 Release:	2
@@ -26,7 +26,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Another game that stars Tux, the Linux Penguin.
 
-%description -l pl
+%description -l pl.UTF-8
 Kolejna gra z linuksowym pingwinem Tuksem.
 
 %prep
