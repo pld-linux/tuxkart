@@ -1,5 +1,5 @@
 Summary:	Another game that stars Tux, the Linux Penguin
-Summary(pl.UTF-8):   Kolejna gra z linuksowym pingwinem Tuksem
+Summary(pl.UTF-8):	Kolejna gra z linuksowym pingwinem Tuksem
 Name:		tuxkart
 Version:	0.4.0
 Release:	2
