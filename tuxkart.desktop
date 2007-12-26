@@ -1,11 +1,10 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=TuxKart
 Comment=Another game that stars Tux, the Linux Penguin
 Comment[pl]=Kolejna gra z linuksowym pingwinem Tuksem
 Exec=tuxkart
 Terminal=false
-Icon=tuxkart.png
+Icon=tuxkart
 Type=Application
 Categories=Game;ArcadeGame;
 # vi: encoding=utf-8
